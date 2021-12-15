@@ -1,6 +1,7 @@
 # Language Notes
-<table><thead><th>python</th><th>java</th></thead><tbody>
+<table><thead><th>topic</th><th>python</th><th>java</th></thead><tbody>
 <tr>
+<td>reduce</td>
 <td>
 
 ```python
@@ -27,6 +28,7 @@ System.out.println(total);
 </tr>
 
 <tr>
+<td>map</td>
 <td>
 
 ```python
@@ -56,6 +58,7 @@ System.out.printf("%d\t", b.get(i));
 </tr>
 
 <tr>
+<td>filter</td>
 <td>
 
 ```python
@@ -85,6 +88,7 @@ System.out.printf("%d\t", b.get(i));
 </tr>
 
 <tr>
+<td>dict</td>
 <td>
 
 ```python
@@ -119,6 +123,7 @@ System.out.printf("%s: %s\t", j.getKey(), j.getValue());
 </tr>
 
 <tr>
+<td>list</td>
 <td>
 
 ```python
@@ -148,6 +153,7 @@ System.out.printf("%d\t", lst.get(i));
 </tr>
 
 <tr>
+<td>set</td>
 <td>
 
 ```python
