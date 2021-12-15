@@ -58,6 +58,35 @@ System.out.printf("%d\t", b.get(i));
 </tr>
 
 <tr>
+<td>sort</td>
+<td>
+
+```python
+
+lst = [9, 5, 2, 7]
+lst.sort()
+print(lst)
+
+```
+
+</td>
+<td>
+
+```java
+
+ArrayList<Integer> data
+= new ArrayList<>(
+Arrays.asList(9, 5, 2, 7)
+);
+Collections.sort(data);
+System.out.println(data);
+
+```
+
+</td>
+</tr>
+
+<tr>
 <td>filter</td>
 <td>
 
