@@ -29,5 +29,5 @@ def build(topic=None):
 topics = list(map(lambda x: x.replace(".java", ""), list(filter(lambda x: x.endswith(".java"), os.listdir()))))
 topics.insert(0, None)
 table = "\n".join(list(map(build, topics)))
-print("# Language Notes")
+print("# Python Vs Java Quick Note")
 print(table)

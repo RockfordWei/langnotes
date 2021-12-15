@@ -1,4 +1,4 @@
-# Language Notes
+# Python Vs Java Quick Note
 <table><thead><th>topic</th><th>python</th><th>java</th></thead><tbody>
 <tr>
 <td>reduce</td>
