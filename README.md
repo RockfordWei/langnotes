@@ -1,6 +1,92 @@
 # Language Notes
-python|java
----|---
-`dinner = {"appetizer": "apple", "beverage": "beer", "course": "crawfish", "desert": "donut"}<br>print(dinner)`|`        HashMap<String, String> dinner = new HashMap<>();<br>        dinner.put("appetizer", "apple");<br>        dinner.put("beverage", "beer");<br>        dinner.put("course", "crawfish");<br>        dinner.put("desert", "donut");<br>        for(Iterator i = dinner.entrySet().iterator(); i.hasNext();) {<br>            Map.Entry j = (Map.Entry)i.next();<br>            System.out.printf("%s: %s\t", j.getKey(), j.getValue());<br>        }`
-`lst = [x + 1 for x in range(10)]<br>print(lst)`|`        ArrayList<Integer> lst = new ArrayList<>();<br>        for(int i = 0; i < 10; i++) {<br>            lst.add(i);<br>            lst.set(i, i + 1);<br>        }<br>        for(int i = 0; i < lst.size(); i++) {<br>            System.out.printf("%d\t", lst.get(i));<br>        }`
-`s = [(-1) ** x for x in range(10)]<br>s = set(s)<br>print(s)`|`        HashSet<Integer> s = new HashSet<>();<br>        for(int x = 0; x < 10; x++) {<br>            int y = (int)Math.pow((double)-1, (double)x);<br>            s.add(y);<br>        }<br>        for(Iterator<Integer> i = s.iterator(); i.hasNext();) {<br>            Integer x = i.next();<br>            System.out.printf("%d\t", x);<br>        }`
+<table><thead><th>python</th><th>java</th></thead><tbody>
+<tr>
+<td>
+
+```python
+
+dinner = {"appetizer": "apple", "beverage": "beer", "course": "crawfish", "desert": "donut"}
+print(dinner)
+
+```
+
+</td>
+<td>
+
+```java
+
+        HashMap<String, String> dinner = new HashMap<>();
+        dinner.put("appetizer", "apple");
+        dinner.put("beverage", "beer");
+        dinner.put("course", "crawfish");
+        dinner.put("desert", "donut");
+        for(Iterator i = dinner.entrySet().iterator(); i.hasNext();) {
+            Map.Entry j = (Map.Entry)i.next();
+            System.out.printf("%s: %s\t", j.getKey(), j.getValue());
+        }
+
+```
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```python
+
+lst = [x + 1 for x in range(10)]
+print(lst)
+
+```
+
+</td>
+<td>
+
+```java
+
+        ArrayList<Integer> lst = new ArrayList<>();
+        for(int i = 0; i < 10; i++) {
+            lst.add(i);
+            lst.set(i, i + 1);
+        }
+        for(int i = 0; i < lst.size(); i++) {
+            System.out.printf("%d\t", lst.get(i));
+        }
+
+```
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```python
+
+s = [(-1) ** x for x in range(10)]
+s = set(s)
+print(s)
+
+```
+
+</td>
+<td>
+
+```java
+
+        HashSet<Integer> s = new HashSet<>();
+        for(int x = 0; x < 10; x++) {
+            int y = (int)Math.pow((double)-1, (double)x);
+            s.add(y);
+        }
+        for(Iterator<Integer> i = s.iterator(); i.hasNext();) {
+            Integer x = i.next();
+            System.out.printf("%d\t", x);
+        }
+
+```
+
+</td>
+</tr>
+
