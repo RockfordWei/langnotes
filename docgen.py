@@ -1,5 +1,5 @@
 import os
-def load(topic, ext="py", markstart=None, markend=None):
+def load(topic, ext="py", markdown="python", markstart=None, markend=None):
     with open("%s.%s" % (topic, ext), "r") as file:
         lines = file.readlines()
     if markstart and markend:
@@ -16,15 +16,16 @@ def load(topic, ext="py", markstart=None, markend=None):
                     started = True
         lines = content
     lines = list(map(lambda x: x.rstrip(), lines))
-    row = "<br>".join(lines)
-    return "`%s`" % row
+    lines.insert(0, "\n```%s\n" % markdown)
+    lines.append("\n```\n")
+    return "\n".join(lines)
 def build(topic=None):
     if topic:
         p = load(topic)
-        j = load(topic, ext="java", markstart="main", markend="return")
-        return "%s|%s" % (p, j)
+        j = load(topic, ext="java", markdown="java",markstart="main", markend="return")
+        return "<tr>\n<td>\n%s\n</td>\n<td>\n%s\n</td>\n</tr>\n" % (p, j)
     else:
-        return "python|java\n---|---"
+        return "<table><thead><th>python</th><th>java</th></thead><tbody>"
 topics = list(map(lambda x: x.replace(".java", ""), list(filter(lambda x: x.endswith(".java"), os.listdir()))))
 topics.insert(0, None)
 table = "\n".join(list(map(build, topics)))
