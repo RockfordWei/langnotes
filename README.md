@@ -5,6 +5,90 @@
 
 ```python
 
+from functools import reduce
+data = [1, 2, 3]
+total = reduce(lambda x, y: x + y, data)
+print(total, sum(data))
+
+```
+
+</td>
+<td>
+
+```java
+
+List<Integer> data = List.of(1, 2, 3);
+int total = data.stream().reduce(0, (x, y) -> x + y);
+System.out.println(total);
+
+```
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```python
+
+a = [1, 2, 3]
+b = list(map(lambda x: x * 2, a))
+print(b)
+
+```
+
+</td>
+<td>
+
+```java
+
+List<Integer> a = List.of(1, 2, 3);
+List<Integer> b = a.stream().map(x -> x * 2)
+.collect(Collectors.toCollection(ArrayList::new));
+
+for(int i = 0; i < b.size(); i++) {
+System.out.printf("%d\t", b.get(i));
+}
+
+```
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```python
+
+a = [1, 2, 3]
+b = list(filter(lambda x: x % 2, a))
+print(b)
+
+```
+
+</td>
+<td>
+
+```java
+
+List<Integer> a = List.of(1, 2, 3);
+List<Integer> b = a.stream().filter(x -> x % 2 != 0)
+.collect(Collectors.toCollection(ArrayList::new));
+
+for(int i = 0; i < b.size(); i++) {
+System.out.printf("%d\t", b.get(i));
+}
+
+```
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```python
+
 dinner = {
 "appetizer": "apple",
 "beverage": "beer",
