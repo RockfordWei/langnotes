@@ -5,7 +5,11 @@
 
 ```python
 
-dinner = {"appetizer": "apple", "beverage": "beer", "course": "crawfish", "desert": "donut"}
+dinner = {
+"appetizer": "apple",
+"beverage": "beer",
+"course": "crawfish",
+"desert": "donut"}
 print(dinner)
 
 ```
@@ -15,15 +19,15 @@ print(dinner)
 
 ```java
 
-        HashMap<String, String> dinner = new HashMap<>();
-        dinner.put("appetizer", "apple");
-        dinner.put("beverage", "beer");
-        dinner.put("course", "crawfish");
-        dinner.put("desert", "donut");
-        for(Iterator i = dinner.entrySet().iterator(); i.hasNext();) {
-            Map.Entry j = (Map.Entry)i.next();
-            System.out.printf("%s: %s\t", j.getKey(), j.getValue());
-        }
+HashMap<String, String> dinner = new HashMap<>();
+dinner.put("appetizer", "apple");
+dinner.put("beverage", "beer");
+dinner.put("course", "crawfish");
+dinner.put("desert", "donut");
+for(Iterator i = dinner.entrySet().iterator(); i.hasNext();) {
+Map.Entry j = (Map.Entry)i.next();
+System.out.printf("%s: %s\t", j.getKey(), j.getValue());
+}
 
 ```
 
@@ -45,14 +49,14 @@ print(lst)
 
 ```java
 
-        ArrayList<Integer> lst = new ArrayList<>();
-        for(int i = 0; i < 10; i++) {
-            lst.add(i);
-            lst.set(i, i + 1);
-        }
-        for(int i = 0; i < lst.size(); i++) {
-            System.out.printf("%d\t", lst.get(i));
-        }
+ArrayList<Integer> lst = new ArrayList<>();
+for(int i = 0; i < 10; i++) {
+lst.add(i);
+lst.set(i, i + 1);
+}
+for(int i = 0; i < lst.size(); i++) {
+System.out.printf("%d\t", lst.get(i));
+}
 
 ```
 
@@ -75,15 +79,15 @@ print(s)
 
 ```java
 
-        HashSet<Integer> s = new HashSet<>();
-        for(int x = 0; x < 10; x++) {
-            int y = (int)Math.pow((double)-1, (double)x);
-            s.add(y);
-        }
-        for(Iterator<Integer> i = s.iterator(); i.hasNext();) {
-            Integer x = i.next();
-            System.out.printf("%d\t", x);
-        }
+HashSet<Integer> s = new HashSet<>();
+for(int x = 0; x < 10; x++) {
+int y = (int)Math.pow((double)-1, (double)x);
+s.add(y);
+}
+for(Iterator<Integer> i = s.iterator(); i.hasNext();) {
+Integer x = i.next();
+System.out.printf("%d\t", x);
+}
 
 ```
 

@@ -15,7 +15,7 @@ def load(topic, ext="py", markdown="python", markstart=None, markend=None):
                 if markstart in line:
                     started = True
         lines = content
-    lines = list(map(lambda x: x.rstrip(), lines))
+    lines = list(map(lambda x: x.strip(), lines))
     lines.insert(0, "\n```%s\n" % markdown)
     lines.append("\n```\n")
     return "\n".join(lines)
