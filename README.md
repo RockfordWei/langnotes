@@ -8,7 +8,8 @@
 
 from functools import reduce
 data = [1, 2, 3]
-total = reduce(lambda x, y: x + y, data)
+add = lambda x, y: x + y
+total = reduce(add, data)
 print(total, sum(data))
 
 ```
@@ -18,8 +19,12 @@ print(total, sum(data))
 
 ```java
 
-List<Integer> data = List.of(1, 2, 3);
-int total = data.stream().reduce(0, (x, y) -> x + y);
+List<Integer> data
+= List.of(1, 2, 3);
+int total
+= data.stream()
+.reduce(0,
+(x, y) -> x + y);
 System.out.println(total);
 
 ```
@@ -34,7 +39,8 @@ System.out.println(total);
 ```python
 
 a = [1, 2, 3]
-b = list(map(lambda x: x * 2, a))
+f = lambda x: x * 2
+b = list(map(f, a))
 print(b)
 
 ```
@@ -44,13 +50,16 @@ print(b)
 
 ```java
 
-List<Integer> a = List.of(1, 2, 3);
-List<Integer> b = a.stream().map(x -> x * 2)
-.collect(Collectors.toCollection(ArrayList::new));
+List<Integer> a
+= List.of(1, 2, 3);
+List<Integer> b
+= a.stream()
+.map(x -> x * 2)
+.collect(
+Collectors.toCollection(
+ArrayList::new));
 
-for(int i = 0; i < b.size(); i++) {
-System.out.printf("%d\t", b.get(i));
-}
+System.out.println(b);
 
 ```
 
@@ -93,7 +102,8 @@ System.out.println(data);
 ```python
 
 a = [1, 2, 3]
-b = list(filter(lambda x: x % 2, a))
+f = lambda x: x % 2
+b = list(filter(f, a))
 print(b)
 
 ```
@@ -103,13 +113,14 @@ print(b)
 
 ```java
 
-List<Integer> a = List.of(1, 2, 3);
-List<Integer> b = a.stream().filter(x -> x % 2 != 0)
-.collect(Collectors.toCollection(ArrayList::new));
-
-for(int i = 0; i < b.size(); i++) {
-System.out.printf("%d\t", b.get(i));
-}
+List<Integer> a
+= List.of(1, 2, 3);
+List<Integer> b
+= a.stream().filter(x -> x % 2 != 0)
+.collect(
+Collectors.toCollection(
+ArrayList::new));
+System.out.println(b);
 
 ```
 
@@ -136,14 +147,20 @@ print(dinner)
 
 ```java
 
-HashMap<String, String> dinner = new HashMap<>();
+HashMap<String, String> dinner
+= new HashMap<>();
 dinner.put("appetizer", "apple");
 dinner.put("beverage", "beer");
 dinner.put("course", "crawfish");
 dinner.put("desert", "donut");
-for(Iterator i = dinner.entrySet().iterator(); i.hasNext();) {
-Map.Entry j = (Map.Entry)i.next();
-System.out.printf("%s: %s\t", j.getKey(), j.getValue());
+for(
+Iterator i
+= dinner.entrySet().iterator();
+i.hasNext();) {
+Map.Entry j
+= (Map.Entry)i.next();
+System.out.printf("%s: %s\t",
+j.getKey(), j.getValue());
 }
 
 ```
@@ -167,14 +184,14 @@ print(lst)
 
 ```java
 
-ArrayList<Integer> lst = new ArrayList<>();
+ArrayList<Integer> lst
+= new ArrayList<>();
 for(int i = 0; i < 10; i++) {
 lst.add(i);
 lst.set(i, i + 1);
 }
-for(int i = 0; i < lst.size(); i++) {
-System.out.printf("%d\t", lst.get(i));
-}
+// lst.get(i)
+System.out.println(lst);
 
 ```
 
@@ -187,7 +204,8 @@ System.out.printf("%d\t", lst.get(i));
 
 ```python
 
-s = [(-1) ** x for x in range(10)]
+s = [(-1) ** x
+for x in range(10)]
 s = set(s)
 print(s)
 
@@ -198,15 +216,15 @@ print(s)
 
 ```java
 
-HashSet<Integer> s = new HashSet<>();
+HashSet<Integer> s
+= new HashSet<>();
 for(int x = 0; x < 10; x++) {
-int y = (int)Math.pow((double)-1, (double)x);
+int y = (int)
+Math.pow((double)-1,
+(double)x);
 s.add(y);
 }
-for(Iterator<Integer> i = s.iterator(); i.hasNext();) {
-Integer x = i.next();
-System.out.printf("%d\t", x);
-}
+System.out.println(s);
 
 ```
 

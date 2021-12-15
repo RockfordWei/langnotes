@@ -1,4 +1,5 @@
 from functools import reduce
 data = [1, 2, 3]
-total = reduce(lambda x, y: x + y, data)
+add = lambda x, y: x + y
+total = reduce(add, data)
 print(total, sum(data))

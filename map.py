@@ -1,3 +1,4 @@
 a = [1, 2, 3]
-b = list(map(lambda x: x * 2, a))
+f = lambda x: x * 2
+b = list(map(f, a))
 print(b)
