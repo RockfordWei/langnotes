@@ -13,6 +13,6 @@ public class set {
             Integer x = i.next();
             System.out.printf("%d\t", x);
         }
-        System.out.println();
+        return;
     }
 }

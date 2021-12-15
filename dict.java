@@ -12,6 +12,6 @@ public class dict {
             Map.Entry j = (Map.Entry)i.next();
             System.out.printf("%s: %s\t", j.getKey(), j.getValue());
         }
-        System.out.println();
+        return;
     }
 }

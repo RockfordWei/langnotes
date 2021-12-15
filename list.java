@@ -11,6 +11,6 @@ public class list {
         for(int i = 0; i < lst.size(); i++) {
             System.out.printf("%d\t", lst.get(i));
         }
-        System.out.println();
+        return;
     }
 }

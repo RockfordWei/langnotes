@@ -1,3 +1,6 @@
-#Notes for Computer Languages
-
-WIP
+# Language Notes
+python|java
+---|---
+`dinner = {"appetizer": "apple", "beverage": "beer", "course": "crawfish", "desert": "donut"}<br>print(dinner)`|`        HashMap<String, String> dinner = new HashMap<>();<br>        dinner.put("appetizer", "apple");<br>        dinner.put("beverage", "beer");<br>        dinner.put("course", "crawfish");<br>        dinner.put("desert", "donut");<br>        for(Iterator i = dinner.entrySet().iterator(); i.hasNext();) {<br>            Map.Entry j = (Map.Entry)i.next();<br>            System.out.printf("%s: %s\t", j.getKey(), j.getValue());<br>        }`
+`lst = [x + 1 for x in range(10)]<br>print(lst)`|`        ArrayList<Integer> lst = new ArrayList<>();<br>        for(int i = 0; i < 10; i++) {<br>            lst.add(i);<br>            lst.set(i, i + 1);<br>        }<br>        for(int i = 0; i < lst.size(); i++) {<br>            System.out.printf("%d\t", lst.get(i));<br>        }`
+`s = [(-1) ** x for x in range(10)]<br>s = set(s)<br>print(s)`|`        HashSet<Integer> s = new HashSet<>();<br>        for(int x = 0; x < 10; x++) {<br>            int y = (int)Math.pow((double)-1, (double)x);<br>            s.add(y);<br>        }<br>        for(Iterator<Integer> i = s.iterator(); i.hasNext();) {<br>            Integer x = i.next();<br>            System.out.printf("%d\t", x);<br>        }`
