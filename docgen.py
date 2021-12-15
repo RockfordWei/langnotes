@@ -23,9 +23,9 @@ def build(topic=None):
     if topic:
         p = load(topic)
         j = load(topic, ext="java", markdown="java",markstart="main", markend="return")
-        return "<tr>\n<td>\n%s\n</td>\n<td>\n%s\n</td>\n</tr>\n" % (p, j)
+        return "<tr>\n<td>%s</td>\n<td>\n%s\n</td>\n<td>\n%s\n</td>\n</tr>\n" % (topic, p, j)
     else:
-        return "<table><thead><th>python</th><th>java</th></thead><tbody>"
+        return "<table><thead><th>topic</th><th>python</th><th>java</th></thead><tbody>"
 topics = list(map(lambda x: x.replace(".java", ""), list(filter(lambda x: x.endswith(".java"), os.listdir()))))
 topics.insert(0, None)
 table = "\n".join(list(map(build, topics)))
