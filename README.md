@@ -1,5 +1,16 @@
 # Python Vs Java Quick Note
 
+## Performance
+Runtime|Memory|Language
+-------|------|-------
+8 ms|14.8 MB|cpp
+4 ms|6.2 MB|c
+0 ms|38.2 MB|java
+40 ms|14.1 MB|python3
+  
+*Note*: this is a record at leetcode real optimization challenge, where the java code won the fastest while the memory is the worst. C is still fast and small, but python memory is actuall not a bad choice. :-(
+
+## Syntax
 <table><thead><th>topic</th><th>python</th><th>java</th></thead><tbody>
 <tr>
 <td>reduce</td>
@@ -232,12 +243,3 @@ System.out.println(s);
 </td>
 </tr>
 
-## Performance
-Runtime|Memory|Language
---------------------
-8 ms|14.8 MB|cpp
-4 ms|6.2 MB|c
-0 ms|38.2 MB|java
-40 ms|14.1 MB|python3
-  
-*Note*: this is a record at leetcode real optimization challenge, where the java code won the fastest while the memory is the worst. C is still fast and small, but python memory is actuall not a bad choice. :-(
